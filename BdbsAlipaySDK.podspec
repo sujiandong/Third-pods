@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     util.header_mappings_dir = "Alipay/Utils"
     util.source_files = "Alipay/Utils/Util/*.{h,m}", "Alipay/Utils/openssl/*.h"
     util.vendored_libraries = "Alipay/Utils/libcrypto.a", "Alipay/Utils/libssl.a"
-    util.dependency "Alipay/Core"
+    util.dependency "BdbsAlipaySDK/Core"
   end
 
 
