@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
   s.libraries = 'z', 'c++'
 
   s.xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/Alipay/BdbsAlipaySDK', 
-    'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Alipay/BdbsAlipaySDK', 
+    'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/BdbsAlipaySDK', 
+    'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/BdbsAlipaySDK', 
   }
 
   s.subspec "Core" do |core|

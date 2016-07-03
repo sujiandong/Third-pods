@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
   s.preserve_paths = "Wechat/libWeChatSDK.a"
   s.vendored_libraries = "Wechat/libWeChatSDK.a"
   s.xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Wechat/BdbsWechatSDK"',
-    'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Wechat/BdbsWechatSDK"'
+    'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/BdbsWechatSDK"',
+    'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/BdbsWechatSDK"'
   }
   s.requires_arc = true
   s.frameworks = 'SystemConfiguration', 'CoreTelephony'
