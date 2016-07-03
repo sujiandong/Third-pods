@@ -23,22 +23,22 @@ Pod::Spec.new do |s|
   s.libraries = 'z', 'c++'
 
   s.xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/Alipay/BdbsAlipaySDK', 
-    'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/Alipay/BdbsAlipaySDK', 
+    'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/BdbsAlipaySDK', 
+    'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/BdbsAlipaySDK', 
   }
 
   s.subspec "Core" do |core|
-    core.public_header_files = "Alipay/AlipaySDK.framework/Headers/**/*.h"
-    core.vendored_frameworks = "Alipay/AlipaySDK.framework"
+    core.public_header_files = "AlipaySDK.framework/Headers/**/*.h"
+    core.vendored_frameworks = "AlipaySDK.framework"
     core.resources = "AlipaySDK.bundle"
   end
 
   s.subspec "Util" do |util|
-    util.public_header_files = "Alipay/Utils/Util/*.h", "Alipay/Utils/openssl/*.h"
-    util.header_mappings_dir = "Alipay/Utils"
-    util.source_files = "Alipay/Utils/Util/*.{h,m}", "Alipay/Utils/openssl/*.h"
-    util.vendored_libraries = "Alipay/Utils/libcrypto.a", "Alipay/Utils/libssl.a"
-    util.dependency "Alipay/BdbsAlipaySDK/Core"
+    util.public_header_files = "Utils/Util/*.h", "Utils/openssl/*.h"
+    util.header_mappings_dir = "Utils"
+    util.source_files = "Utils/Util/*.{h,m}", "Utils/openssl/*.h"
+    util.vendored_libraries = "Utils/libcrypto.a", "Utils/libssl.a"
+    util.dependency "Alipay/Core"
   end
 
 
